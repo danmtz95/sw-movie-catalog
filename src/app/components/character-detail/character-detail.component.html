@@ -15,12 +15,12 @@
                 <img src="http://www.lightspeedmagazine.com/wp-content/files_mf/686.jpg" alt="Imagen del Personaje" ngbTooltip="Ya no pude ponerle las imagenes :)" class="ajustarTamanio">
             </div>
             <div class="col-md-8">
-                <h3>Description:</h3>
-                <p>Birth year:{{character.birth_year}}</p>
-                <p>Date:{{character.created}}</p>
-                <p>Gender:{{character.gender}}</p>
-                <p>Hair Color:{{character.hair_color}}</p>
-                <p>Eye Color{{character.eye_color}}</p>
+                <h3>Description: </h3>
+                <p>Birth year: {{character.birth_year}}</p>
+                <p>Date: {{character.created | date: 'short'}}</p>
+                <p>Gender: {{character.gender}}</p>
+                <p>Hair Color: {{character.hair_color}}</p>
+                <p>Eye Color: {{character.eye_color}}</p>
                 <p></p>
                 <p>
                     Homeworld:
