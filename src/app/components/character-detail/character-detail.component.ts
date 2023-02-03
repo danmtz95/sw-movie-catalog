@@ -53,18 +53,17 @@ export class CharacterDetailComponent {
     // let url_character = this.route.snapshot.paramMap.get('url');
     let url_character = this.route.snapshot.queryParams['url'];
     console.log(url_character);
-    // console.log('asdasd el dos',url_character2);
     // let url_character = this.route.snapshot.queryParams['url'];
     if (url_character) {
 
       forkJoin({
         character: this.charactersService.getCharacterByUrl(url_character),
         movie_list: this.moviesService.getMovies(),
-        planet_list: this.planetsService.getPlanets()
+        planet_list: this.planetsService.getAllPlanets()
       }).subscribe((responses) => {
         this.character = responses.character;
         this.movie_list = responses.movie_list.results;
-        this.planet_list = responses.planet_list.results;
+        this.planet_list = responses.planet_list;
         this.movie_list.forEach((i) => {
           this.movie_diccionario[i.url] = i;
         });

@@ -11,3 +11,14 @@ h5{
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
+// .breadcrumb {
+//     background-color: #ddd;
+//   }
+  
+  .breadcrumb a {
+    color: orange;
+  }
+  
+  .breadcrumb .active {
+    color: #333;
+  }

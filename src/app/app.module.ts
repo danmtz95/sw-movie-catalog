@@ -13,6 +13,7 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 
 import { faCoffee, fas } from '@fortawesome/free-solid-svg-icons';
 import { FilterPipe } from './pipes/filter.pipe';
+import { OrderPipe } from './pipes/order.pipe';
 import { HeaderComponent } from './components/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -23,6 +24,7 @@ import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap'
         ListMovieComponent,
         MovieDetailComponent,
         FilterPipe,
+        OrderPipe,
         HeaderComponent,
         CharacterDetailComponent,
         ToolBarComponent,

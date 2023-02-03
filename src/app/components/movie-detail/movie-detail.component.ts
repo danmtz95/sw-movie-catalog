@@ -80,10 +80,10 @@ export class MovieDetailComponent implements OnInit {
 
       forkJoin({
         movie: this.moviesService.getMovieById(id_movie),
-        character_list: this.charactersService.getCharacters()
+        character_list: this.charactersService.getAllPeople()
       }).subscribe((responses) => {
         this.movie = responses.movie;
-        this.character_list = responses.character_list.results;
+        this.character_list = responses.character_list;
         this.character_list.forEach((i) => {
           this.character_diccionario[i.url] = i;
         });
@@ -96,5 +96,13 @@ export class MovieDetailComponent implements OnInit {
         //   );
       })
     }
+  }
+
+  key = 'name';
+  reverse = false;
+
+  sort(key: string) {
+    this.key = key;
+    this.reverse = !this.reverse;
   }
 }
