@@ -1,0 +1,65 @@
+// .card-img-top {
+//   width: 100%;
+//   height: 25vw;
+//   object-fit: cover;
+// }
+
+.card {
+  color: black;
+  /* replace with your actual colour #1680cc */
+}
+
+.card-color-custom {
+  background-color: #495c86;
+  color: white;
+}
+
+.embed-responsive .card-img-top {
+  object-fit: cover;
+}
+
+.ajustarTamanio {
+  width: 100%;
+  height: 30vh;
+}
+
+.centrar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.encima {
+  position: absolute;
+  top: 0;
+  background-color: #ffffff1f;
+  overflow: hidden;
+  width: 69%;
+  height: 0;
+  transition: .4s ease;
+}
+
+.efecto:hover .encima {
+  bottom: 0;
+  height: 75%;
+
+}
+
+.text {
+  white-space: nowrap;
+  color: black;
+  font-size: 22px;
+  font-weight: bolder;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-text-stroke: 0.7px #ffe81f;
+  -ms-transform: translate(-50%, -50%);
+}
+
+.izquierda {
+  border-radius: 10px;
+  width: 73%;
+}

@@ -1,0 +1,81 @@
+<div class="container text-light">
+
+
+    <nav class="breadcrumb text-light">
+        <ol class="breadcrumb text-light " >
+            <li class="breadcrumb-item text-light"><a href="#">Movies</a></li>
+            <li class="breadcrumb-item text-light" aria-current="page"><a href="#">Movie Detail</a></li>
+            <li class="breadcrumb-item active text-light" aria-current="page">Character Detail</li>
+        </ol>
+    </nav>
+    <div class="container">
+        <h1 class="text-center">
+            <p>{{character.name}}</p>
+        </h1>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/150" alt="Imagen del Personaje" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+                <p>Description:</p>
+                <p>Birth year:{{character.birth_year}}</p>
+                <p>Date:{{character.created}}</p>
+                <p>Gender:{{character.gender}}</p>
+                <p>Hair Color:{{character.hair_color}}</p>
+                <p>Eye Color{{character.eye_color}}</p>
+                <p></p>
+                <p>
+                    Homeworld:
+                    <a class="btn btn-warning btn-gradient" data-bs-toggle="collapse" href="#collapseExample"
+                        role="button" aria-expanded="false" aria-controls="collapseExample">
+                        {{this.planet_diccionario[character.homeworld].name}}
+                    </a>
+                    <!-- <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      Button with data-bs-target
+                    </button> -->
+                </p>
+                <div class="collapse" id="collapseExample" >
+                    <div class="card card-body text-dark bg-warning">
+                        <h3>Planet Description:</h3>
+                        <p>
+                            Population:{{this.planet_diccionario[character.homeworld].population}}
+                        </p>
+                        <p>
+                            Climate:{{this.planet_diccionario[character.homeworld].climate}}
+
+                        </p>
+                        <p>
+                            Gravity:{{this.planet_diccionario[character.homeworld].gravity}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-8">
+                <!-- <p>Related Films:</p> -->
+                <button type="button" class="btn btn-warning m-2" [ngbTooltip]="htmlTooltip" placement="bottom" tooltipClass="custom-tooltip">
+                    Related Films
+                </button>
+                <!-- <div *ngFor="let films_url of character.films">
+                    <p>
+                        {{this.movie_diccionario[films_url].title}}
+                    </p>
+                </div> -->
+                <ng-template #htmlTooltip >
+                    <div *ngFor="let films_url of character.films">
+                    <p>
+                        {{this.movie_diccionario[films_url].title}}
+                    </p>
+                </div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="row">
+
+        </div>
+    </div>
+
+
+</div>

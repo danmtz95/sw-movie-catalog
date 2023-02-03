@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.background {
+    background-color: #553c9a;
+    // background-image: var(--bs-gradient);
+    color: white;
+}
+
+h5{
+    color: black;
+}
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+

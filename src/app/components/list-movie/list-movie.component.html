@@ -1,0 +1,66 @@
+<div class="mt-10">
+
+
+    <div class="row justify-content-end">
+        <div class="col-4">
+            <input name="filterFilms" type="search" class="izquierda form-control" placeholder="Buscar..."
+                [(ngModel)]="filterFilms" />
+        </div>
+    </div>
+    <br />
+    <!-- <br /> -->
+    <!-- <div class="row row-cols-3">
+
+        <div class="col efecto" *ngFor="let item of films | filter:filterFilms">
+            <a routerLink="/film/{{item.episode_id}}">
+                <img class="ajustarTamanio" src="./assets/img/{{item.episode_id}}.png">
+                <div class="encima">
+                    <h5 class="text">{{item.title}} </h5>
+                </div>
+            </a>
+        </div>
+    </div> -->
+    <div class="row row-cols-1 row-cols-md-2  row-cols-lg-6 g-4">
+        <div class="col" *ngFor="let item of films | filter:filterFilms">
+            <a class="card-wrap" routerLink="/movie/{{item.episode_id}}">
+
+
+                <!-- <div class="card">
+                    <img src="./assets/img/{{item.episode_id}}.png" class="card-img-top" style="min-height: 40vh;"
+                        alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.title}}</h5>
+                        <h6 class="card-title">Release Date: {{item.release_date}}</h6>
+                        <h6 class="card-title">Episode: {{item.episode_id}}</h6>
+                        <h6 class="card-title">Director: {{item.director}}</h6>
+                        <h6 class="card-title">Producer: {{item.producer}}</h6>
+                    </div>
+                </div> -->
+                <div class="card mb-3 card-color-custom" style="min-height: 45vh;">
+                    <div class="row g-0">
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <img src="./assets/img/{{item.episode_id}}.png"
+                                class="img-fluid card-img-top ajustarTamanio" alt="...">
+                            <!-- <img src="..." class="img-fluid rounded-start" alt="..."> -->
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{item.title}}</h5>
+                                <p class="card-text">
+                                Release Date: {{item.release_date}}
+                                Episode: {{item.episode_id}}
+                                Director: {{item.director}}
+                                Producer: {{item.producer}}
+                                </p>
+                                <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </a>
+        </div>
+    </div>
+
+
+</div>

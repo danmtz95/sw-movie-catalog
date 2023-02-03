@@ -1,0 +1,120 @@
+<!-- <div class="container"> -->
+<!-- <div class=" d-flex flex-row flex-wrap" style="height: 2000px;">
+    <div class="">
+        <div>
+            <p>{{movie.title}}</p>
+            <img class="logo" src="assets/img/{{movie.episode_id}}.png" alt="">
+        </div>
+    </div>
+    <div class="">
+        <p>{{movie.opening_crawl}}</p>
+    </div>
+
+    <div class="">
+        <p>Episode Number: {{movie.episode_id}}</p>
+        <p>Director: {{movie.director}}</p>
+        <p>Productor: {{movie.producer}}</p>
+        <p>Release date: {{movie.release_date}}</p>
+        <p>Characters:</p>
+        <div *ngFor="let character_url of movie.characters">
+            <a [routerLink]="['/character/']" [queryParams]="{url: character_url}">
+                <p>
+                    {{this.character_diccionario[character_url].name}}
+                </p>
+            </a>
+        </div>
+
+        <table>
+            <tr>
+                <td>
+                    <button routerLink="/character">Character</button>
+                </td>
+                <td>
+                    <button>Vehicles</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button>Planet</button>
+                </td>
+                <td>
+                    <button>Services</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button>StartShips</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div> -->
+<div class="container">
+
+
+    <nav class="breadcrumb text-light">
+        <ol class="breadcrumb text-light">
+            <li class="breadcrumb-item text-light"><a href="#">Movies</a></li>
+            <!-- <li class="breadcrumb-item" aria-current="page">Movies</li> -->
+            <li class="breadcrumb-item active text-light" aria-current="page">Movie Detail</li>
+        </ol>
+    </nav>
+    <div >
+        <div class="row">
+            <div class="col-lg-3">
+                <img class="logo" src="assets/img/{{movie.episode_id}}.png" alt="">
+                <div  data-setbg="img/anime/details-pic.jpg">
+                    <!-- <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                <div class="view"><i class="fa fa-eye"></i> 9141</div> -->
+                </div>
+            </div>
+            <div class="col-lg-9 text-light">
+                <div >
+                    <div >
+                        <h3>{{movie.title}}</h3>
+                        <span>Episode: {{movie.episode_id}}</span>
+                    </div>
+                    <div >
+                        <div>
+                            <a href="#"><i class="fa fa-star"></i></a>
+                            <a href="#"><i class="fa fa-star"></i></a>
+                            <a href="#"><i class="fa fa-star"></i></a>
+                            <a href="#"><i class="fa fa-star"></i></a>
+                            <a href="#"><i class="fa fa-star-half-o"></i></a>
+                        </div>
+                        <span></span>
+                    </div>
+                    <p>{{movie.opening_crawl}}</p>
+                    <div >
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <ul>
+                                    <li><span>Release date: </span>{{movie.release_date}}</li>
+                                    <li><span>Director: </span>{{movie.director}}</li>
+                                    <li><span>Productor: </span> {{movie.producer}}</li>
+                                    <!-- <li><span>Status:</span> Airing</li>
+                                <li><span>Genre:</span> Action, Adventure, Fantasy, Magic</li> -->
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <p>Characters:</p>
+                                <div *ngFor="let character_url of movie.characters">
+                                    <a [routerLink]="['/character/']" [queryParams]="{url: character_url}">
+                                        <p>
+                                            {{this.character_diccionario[character_url].name?this.character_diccionario[character_url].name:this.character_diccionario[character_url].url}}
+                                        </p>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div >
+                        <!-- <a href="#" class="follow-btn"><i class="fa fa-heart-o"></i> Follow</a>
+                    <a href="#" class="watch-btn"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
